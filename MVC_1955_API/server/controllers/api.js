@@ -37,7 +37,7 @@ module.exports = {
 	},
 	
 	show: function(req, res) { 
-		Year.findOne({_id: req.params.name}, function(err, results) {
+		Year.findOne({name: req.params.name}, function(err, results) {
 				if (err){
 					res.json(err)
 				}
